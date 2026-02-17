@@ -1,0 +1,20 @@
+def filter_below(threshold):
+    # complete the code here
+    pass
+
+@filter_below(10)
+def sensor_stream():
+    """Simulates a sensor reading stream."""
+    data = [5, 12, 8, 20, 3, 15]
+    for value in data:
+        print(f"Reading sensor: {value}") # for debugging
+        yield value
+
+# Test Kodu
+if __name__ == "__main__":
+    stream = sensor_stream()
+    
+    print("Stream starting...")
+    #  expected outcome: 12,20,15 and reading sensor logs
+    for reading in stream:
+        print(f"Captured: {reading}")
